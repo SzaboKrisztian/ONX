@@ -1,0 +1,36 @@
+What questions can one ask about the state of the game?
+
+What is the name of player 1?
+What is the name of player 2?
+What symbol is player 1 using? (e.g. 'X')
+What symbol is player 2 using? (e.g. 'Y')
+Whose move is it currently?
+What's the current state of the board?
+
+public Player getPlayer(int i);
+->game.getPlayer(1 / 2)
+Player {
+-name:String
+-symbol:char
++.Player(String name, char symbol)
++.getName():String
++.getSymbol():char
+~+.getMove():int
+}
+game.getPlayer(i).getName()
+
+public int getCurrentPlayer();
+
+Board {
+-state:String
+// Board representation is:
+// A String of length 9
+// 123
+// 456
+// 789
+// 000000000 Empty
+// 123456789 Positions, numbered
+// Players mark the positions with 1 and 2
+// equivalent also to the player's number
+// 121212210
+-currentPlayer
