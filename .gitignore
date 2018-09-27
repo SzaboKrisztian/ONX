@@ -1,1 +1,5 @@
 *.class
+lib/
+lib/*
+tests/
+tests/*
